@@ -8,19 +8,19 @@ def index(request):
 def add(request):
 
 
-    return render(request, 'artlink/add.html')
+    return render(request, 'templates/add.html')
 
 def browse(request):
 
 
-    return render(request, 'artlink/browse.html')
+    return render(request, 'templates/browse.html')
 
 def about(request):
 
 
-    return render(request, 'artlink/about.html')
+    return render(request, 'about.html')
 
 def activity_show(request, activity_slug):
 
 
-    return render(request, 'artlink/category.html')
+    return render(request, 'templates/category.html')
