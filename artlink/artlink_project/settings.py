@@ -25,8 +25,6 @@ SECRET_KEY = 'h_=nk25jt5vrxdddktvp+l+s044io=8v6at$2y(%uuj1b3sus-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
-
 ALLOWED_HOSTS = []
 
 
@@ -60,13 +58,14 @@ TEMPLATES = [
         'DIRS': [TEMPLATE_DIR, ],
         'APP_DIRS': True,
         'OPTIONS': {
+            'debug': DEBUG,
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
-                'placeholdr.context_processors.user',
+                'artlink.context_processors.user',
             ],
         },
     },
