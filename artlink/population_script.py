@@ -6,9 +6,7 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE","artlink_project.settings")
 import django
 django.setup()
 
-from cfg.models import *
-
-
+from artlink.models import *
 
 def populate():
 
