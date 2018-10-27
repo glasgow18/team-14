@@ -13,6 +13,9 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
+# Dynamic pathing to the templates folder
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
@@ -50,6 +53,24 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'artlink_project.urls'
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [TEMPLATE_DIR, ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
+                'placeholdr.context_processors.user',
+            ],
+        },
+    },
+]
 
 WSGI_APPLICATION = 'artlink_project.wsgi.application'
 
