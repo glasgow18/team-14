@@ -7,8 +7,6 @@ urlpatterns = [
 	url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
     url(r'^activity/(?P<activity_slug>[\w\-]+)/$', views.activity_show, name='activity_show'),
-    url(r'^$', views.add, name='add'),
-    url(r'^$', views.browse, name='browse'),
-    url(r'^$', views.about, name='about'),
-    url(r'^$', views.about, name='index'),
-]
+    url(r'^add$', views.add, name='add'),
+    url(r'^browse$', views.browse, name='browse'),
+    url(r'^about$', views.about, name='about'),
