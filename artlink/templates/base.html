@@ -161,10 +161,6 @@ a {
 </head>
 
 <body>
-  {% block body_block %}
-
-  {% endblock %}
-</body>
 <div class="topnav">
   <a class="active" href="#home">Logo Goes Here</a>
 <div class="links">
@@ -193,11 +189,15 @@ a {
 
 
 <div style="padding-left:16px">
-  <h2>Top Navigation Example</h2>
-  <p>Some content..</p>
+
 </div>
 <footer class="footer">
 </footer>
+  {% block body_block %}
+
+  {% endblock %}
+
+</body>
 
 <!-- Bootstrap Stylesheet -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous" />
