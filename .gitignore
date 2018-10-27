@@ -3,3 +3,8 @@ venv/
 myenv/
 *.sqlite3
 .idea/
+bin/
+include/
+lib/*
+__pycache__
+pyvenv.cfg
