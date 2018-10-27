@@ -1,7 +1,7 @@
 # Populate local database with sample data
 import json
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE","artlink.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE","artlink_project.settings")
 
 import django
 django.setup()
