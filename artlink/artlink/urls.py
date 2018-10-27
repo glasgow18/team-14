@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^$', views.add, name='add'),
     url(r'^$', views.browse, name='browse'),
     url(r'^$', views.about, name='about'),
+    url(r'^$', views.about, name='index'),
 ]
