@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 # Dynamic pathing to the templates folder
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
@@ -101,4 +102,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
+
+STATICFILES_DIRS = [STATIC_DIR, ]
 STATIC_URL = '/static/'
+
