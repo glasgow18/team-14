@@ -1,0 +1,13 @@
+*.pyc
+venv/
+myenv/
+*.sqlite3
+**/.idea/
+**/**/.idea
+bin/
+include/
+lib/*
+__pycache__
+pyvenv.cfg
+artlink/cfg/lib64
+**/migrations/*
