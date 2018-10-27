@@ -1,1 +1,54 @@
 <!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Control the behavior of search engine crawling and indexing -->
+  <meta name="robots" content="index,follow"><!-- All Search Engines -->
+  <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+
+  <!-- Identify the software used to build the document (i.e. - WordPress, Dreamweaver) -->
+  <meta name="generator" content="django">
+
+  <!-- Add to home screen -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!--Fallback.js-->
+
+  <title>
+    Artlink
+    {% block title_block %}
+    Artlink - Discovery
+    {% endblock %}
+  </title>
+</head>
+
+<body>
+  {% block body_block %}
+  {% endblock %}
+</body>
+<footer class="footer">
+</footer>
+
+<!-- Bootstrap Stylesheet -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous" />
+<!--WOW.js-->
+
+<!--Animate.css-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" />
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+<!-- Bootstrap Popper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/popper.min.js" integrity="sha256-ST2MecrXrJaAsqmfpk9XRQITlDoyMmUtgKBEndDisSc=" crossorigin="anonymous"></script>
+<!-- Bootstrap JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
+
+{% block js_block %}
+{% endblock %}
+</body>
+
+</html>
