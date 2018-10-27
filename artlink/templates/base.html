@@ -14,11 +14,12 @@ body {
 }
 
 .bottomnav {
-  overflow: hidden;
-  background-color: #333;
-    position: absolute;
-    bottom: 0px;
-  width: 100vw;
+overflow: hidden;
+    background-color: #333;
+    width: 100vw;
+    bottom: 0;
+    z-index: 999;
+    position: fixed;
 }
 
 .links {
@@ -26,6 +27,11 @@ body {
   background-color: #333;
     text-align: right;
     float: right;
+}
+
+.socialmedia {
+    text-align: center;
+    float: center;
 }
 
 .topnav a {
@@ -172,18 +178,6 @@ a {
 </div>
 </div>
 
-<div class="bottomnav">
-                   <ul class="social-network social-circle">
-<div class="socialmedia">
-                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
-                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-</div>
-                    </ul>		
-</div>
-
 
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -191,7 +185,19 @@ a {
 <div style="padding-left:16px">
 
 </div>
+
 <footer class="footer">
+<div class="bottomnav">
+<div class="socialmedia">
+                   <ul class="social-network social-circle">
+                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+<div>		
+</div>
 </footer>
   {% block body_block %}
 
@@ -215,6 +221,7 @@ a {
 
 {% block js_block %}
 {% endblock %}
+
 </body>
 
 </html>
