@@ -12,4 +12,3 @@ def browse():
 
 
 def about():
-
