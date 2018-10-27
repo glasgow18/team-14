@@ -1,7 +1,7 @@
 # Populate local database with sample data
 import json
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE","artlink.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE","artlink_project.settings")
 
 import django
 django.setup()
@@ -18,7 +18,7 @@ def populate():
     # Populate database with data
 
 
-    
+
     senses = ["Sound","Smell","Sight","Touch","Taste"]
     for s in senses:
         add_senses(s)
@@ -40,7 +40,7 @@ def add_senses(sense):
     s = Sense.objects.get_or_create(sense = sense)
     s.save()
     print("Sense added %s" % s.sense)
-    
+
 
 if __name__ == "__main__":
     print("Starting population script for artlink")
