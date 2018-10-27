@@ -2,13 +2,12 @@
 venv/
 myenv/
 *.sqlite3
-.idea/
+**/.idea/
+**/**/.idea
 bin/
 include/
 lib/*
 __pycache__
 pyvenv.cfg
 artlink/cfg/lib64
-artlink/artlink_project/.idea/
-artlink/migrations
-artlink_project/migrations
+**/migrations/*

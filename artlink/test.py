@@ -9,4 +9,3 @@ with open("population_data.json", "r") as f:
 for i in data:
     print(i["description"])
 #print(len(a))
-

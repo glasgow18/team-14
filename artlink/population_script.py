@@ -29,14 +29,12 @@ def populate():
 
 def add_activity(activity):
     # This will throw a RuntimeWarning during population, which can be ignored for now.
-    a = Activity.objects.get_or_create(title=activity["title"],description = activity["description"],features= activity["features"],place = activity["place"],cost= activity["cost"],contact= activity["contact"],welcomeComment= activity["welcomeComment"],webLink = activity["webLink"],review = Review.objects.get(review =activity["review"]),sense=Sense.objects.get(sense=activity["sense"]))[0]
-    a.save()
+    a, created = Activity.objects.get_or_create(title=activity["title"],description = activity["description"],features= activity["features"],place = activity["place"],cost= activity["cost"],contact= activity["contact"],welcomeComment= activity["welcomeComment"],webLink = activity["webLink"],review = activity["reviews"])
     print("Activity added: %s" % e.title)
 
 
 def add_senses(sense):
-    s = Sense.objects.get_or_create(sense = sense)
-    s.save()
+    s, created = Sense.objects.get_or_create(sense = sense)
     print("Sense added %s" % s.sense)
 
 
