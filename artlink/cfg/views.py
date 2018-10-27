@@ -6,9 +6,18 @@ def index(request):
     return HttpResponse("Hello World!")
 
 
-def add():
+def add(request):
 
-def browse():
+    return render(request, 'cfg/add.html')
 
+def browse(request):
 
-def about():
+    return render(request, 'cfg/browse.html' )
+
+def about(request):
+
+    return render(request, 'cfg/about.html')
+
+def activity_show(request, activity_slug):
+
+    return render(request, 'cfg/category.html')
