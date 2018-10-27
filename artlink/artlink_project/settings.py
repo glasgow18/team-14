@@ -36,7 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cfg'
+    'artlink'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -49,9 +49,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'artlink.urls'
+ROOT_URLCONF = 'artlink_project.urls'
 
-WSGI_APPLICATION = 'artlink.wsgi.application'
+WSGI_APPLICATION = 'artlink_project.wsgi.application'
 
 
 # Database
