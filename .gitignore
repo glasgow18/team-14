@@ -1,4 +1,5 @@
 *.pyc
 venv/
 myenv/
-
+*.sqlite3
+.idea/
