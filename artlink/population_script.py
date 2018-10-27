@@ -7,7 +7,7 @@ import django
 django.setup()
 
 from artlink.models import *
-
+print("hie")
 def populate():
 
     # Load sample data from files
