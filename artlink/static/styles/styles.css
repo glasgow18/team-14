@@ -59,6 +59,7 @@ margin: 5px auto;
     width: 100vw;
     bottom: 0;
     z-index: 999;
+	position:fixed;
 }
 
 .links {
