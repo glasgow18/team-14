@@ -4,7 +4,6 @@ body {
 
 }
 
-
 .center {
     display: block;
     margin-left: auto;
@@ -96,6 +95,7 @@ margin: 5px auto;
   border: none;
   font-size: 17px;
 }
+
 ul.social-network {
 	list-style: none;
 	display: inline;
