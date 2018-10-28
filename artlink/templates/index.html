@@ -5,125 +5,116 @@
 
 {% block body_block %}
 
-<div class="senses">
-<form class="nav-item form-inline my-2 my-lg-0" id="search" action="{% url 'browse' %}" method="GET">
-  <input id="id_q" class="form-control mr-sm-2" name="q" type="search" placeholder="Explore experiences..." aria-label="Search">
-  <button class="btn btn-outline-warning" id="navbar-search-button" type="submit">Search</button>
-</form>
+<div class="senses container">
+
+  <div class="d-flex justify-content-center">
+    <form class="form-group form-inline" id="search" action="{% url 'browse' %}" method="GET">
+      <input id="id_q" class="form-group form-control mr-sm-2" name="q" type="search" placeholder="Explore experiences..." aria-label="Search">
+      <button class="btn btn-outline-warning" id="navbar-search-button" type="submit">Search</button>
+    </form>
+  </div>
+
 </div>
 
-
+<!-- remove icons
 <div class="container-fluid">
-    <div class="row">
-            <div class="col-4">
-            </div>
+  <div class="row">
+    <div class="col-4">
+    </div>
 
-            <div class="col-4">
-                <img src="{% static 'images/noise.png' %}" class="rounded-circle" class="img-fluid" alt="af"
-                     height="220"
-                     width="250">
-            </div>
+    <div class="col-4">
+      <img src="{% static 'images/noise.png' %}" class="rounded-circle" class="img-fluid" alt="af" height="50" width="50">
+    </div>
 
-            <div class="col-4">
-            </div>
+    <div class="col-4">
+    </div>
 
-        </div>
-        <!--
+  </div>
         class="rounded-circle"
-        -->
 
 
-        <div class="row">
-            <div class="col-4">
-                <img src="{% static 'images/touch.png' %}" class="rounded-circle" alt="af" height="220" width="250">
+  <div class="row">
+    <div class="col-4">
+      <img src="{% static 'images/touch.png' %}" class="rounded-circle" alt="af" height="220" width="250">
+    </div>
+
+    <div class="col-4">
+    </div>
+
+    <div class="col-4">
+      <img src="{% static 'images/eye.png' %}" class="rounded-circle" class="img-fluid" alt="af" height="220" width="250">
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-3">
+    </div>
+    <div class="col-6">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+          <form class="card card-sm">
+            <div class="card-body row no-gutters align-items-center">
+              <div class="col-auto">
+                <i class="fas fa-search h4 text-body"></i>
+              </div>
             </div>
-
-            <div class="col-4">
-            </div>
-
-            <div class="col-4">
-                <img src="{% static 'images/eye.png' %}" class="rounded-circle" class="img-fluid" alt="af" height="220"
-                     width="250">
-
-            </div>
+          </form>
         </div>
-
-        <div class="row">
-            <div class="col-3">
-            </div>
-            <div class="col-6">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-10 col-lg-8">
-                        <form class="card card-sm">
-                            <div class="card-body row no-gutters align-items-center">
-                                <div class="col-auto">
-                                    <i class="fas fa-search h4 text-body"></i>
-                                </div>
-                                <!--end of col-->
-                                <!-- if we want a search fx in the middle it would go here -->
-                                <!--end of col-->
-                            </div>
-                        </form>
-                    </div>
-                    <!--end of col-->
-                </div>
-            </div>
-            <div class="col-3">
-            </div>
-        </div>
+      </div>
+    </div>
+    <div class="col-3">
+    </div>
+  </div>
 
 
-        <div class="row">
-            <div class="col-4">
-                <img src="{% static 'images/smell.png' %}" class="rounded-circle" class="img-fluid" alt="af"
-                     height="220"
-                     width="250">
-            </div>
+  <div class="row">
+    <div class="col-4">
+      <img src="{% static 'images/smell.png' %}" class="rounded-circle" class="img-fluid" alt="af" height="220" width="250">
+    </div>
 
-            <div class="col-4">
-            </div>
+    <div class="col-4">
+    </div>
 
-            <div class="col-4">
-                <img src="{% static 'images/taste.png' %}" class="rounded-circle" class="img-fluid" alt="af"
-                     height="220"
-                     width="250">
-            </div>
+    <div class="col-4">
+      <img src="{% static 'images/taste.png' %}" class="rounded-circle" class="img-fluid" alt="af" height="220" width="250">
+    </div>
 
-        </div>
+  </div>
 
 
-        <div class="container-fluid">
-            <div class="row">
+  <div class="container-fluid">
+    <div class="row">
 
-            </div>
+    </div>
 
 
-        </div>
-    </select>
+  </div>
+  </select>
 </div>
+-->
 
 {% endblock %}
 
 <script>
-    $(function () {
+  $(function() {
     $('a[href="#search"]').on('click', function(event) {
-        event.preventDefault();
-        $('#search').addClass('open');
-        $('#search > form > input[type="search"]').focus();
+      event.preventDefault();
+      $('#search').addClass('open');
+      $('#search > form > input[type="search"]').focus();
     });
 
     $('#search, #search button.close').on('click keyup', function(event) {
-        if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
-            $(this).removeClass('open');
-        }
+      if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
+        $(this).removeClass('open');
+      }
     });
 
 
     //Do not include! This prevents the form from submitting for DEMO purposes only!
     $('form').submit(function(event) {
-        event.preventDefault();
-        return false;
+      event.preventDefault();
+      return false;
     })
-});
-
+  });
 </script>
