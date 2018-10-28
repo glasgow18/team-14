@@ -26,6 +26,7 @@ class Sense(models.Model):
 class Activity(models.Model):
     title = models.CharField(max_length=100, unique=True)
     features = models.TextField()
+    # TODO this should eventually be able to link to a Maps API (GoogleMaps, OpenLayers)
     place = models.CharField(max_length=128, unique=False)
     cost = models.CharField(max_length=50, unique=False)
     contact = models.CharField(max_length=128, unique=False)
@@ -35,6 +36,8 @@ class Activity(models.Model):
     sense = models.ForeignKey(Sense, on_delete=models.CASCADE)
     description = models.TextField()
 
+    #DEBUG slugifying the title returns a unique constraint error
+    # so random values have to be used for now....
     slug = models.SlugField(unique=True,default=uuid.uuid1)
 
     def __str__(self):
