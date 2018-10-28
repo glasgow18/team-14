@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
 <style>
 body {
   margin: 0;
@@ -14,11 +15,12 @@ body {
 }
 
 .bottomnav {
-  overflow: hidden;
-  background-color: #333;
-    position: absolute;
-    bottom: 0px;
-  width: 100vw;
+overflow: hidden;
+    background-color: #333;
+    width: 100vw;
+    bottom: 0;
+    z-index: 999;
+    position: fixed;
 }
 
 .links {
@@ -26,6 +28,11 @@ body {
   background-color: #333;
     text-align: right;
     float: right;
+}
+
+.socialmedia {
+    text-align: center;
+    float: center;
 }
 
 .topnav a {
@@ -65,8 +72,8 @@ ul.social-network li {
 
 
 /* footer social icons */
-.social-network a.icoRss:hover {
-	background-color: #F56505;
+.social-network a.icoInstagram:hover {
+	background-color: #e1306c;
 }
 .social-network a.icoFacebook:hover {
 	background-color:#3B5998;
@@ -83,7 +90,7 @@ ul.social-network li {
 .social-network a.icoLinkedin:hover {
 	background-color:#007bb7;
 }
-.social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+.social-network a.icoInstagram:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
 .social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
 	color:#fff;
 }
@@ -130,11 +137,9 @@ a.socialIcon:hover, .socialHoverClass {
 }
 
 a {
- background-color: #D3D3D3;   
+ background-color: #D3D3D3;
 }
-
 </style>
-<html>
 
 <head>
   <meta charset="utf-8">
@@ -151,6 +156,7 @@ a {
   <meta name="mobile-web-app-capable" content="yes">
 
   <!--Fallback.js-->
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}/css/styles.css" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <title>A
     Artlink
@@ -161,10 +167,6 @@ a {
 </head>
 
 <body>
-  {% block body_block %}
-
-  {% endblock %}
-</body>
 <div class="topnav">
   <a class="active" href="#home">Logo Goes Here</a>
 <div class="links">
@@ -176,28 +178,30 @@ a {
 </div>
 </div>
 
-<div class="bottomnav">
-                   <ul class="social-network social-circle">
-<div class="socialmedia">
-                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
-                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-</div>
-                    </ul>		
-</div>
-
 
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 
 <div style="padding-left:16px">
-  <h2>Top Navigation Example</h2>
-  <p>Some content..</p>
+
 </div>
+
 <footer class="footer">
+<div class="bottomnav">
+<div class="socialmedia">
+                   <ul class="social-network social-circle">
+                        <li><a href="https://www.instagram.com/artlinkedin/" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/ArtlinkEdinburgh" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/ArtlinkEdin" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+<div>
+</div>
 </footer>
+  {% block body_block %}
+
+  {% endblock %}
+
+</body>
 
 <!-- Bootstrap Stylesheet -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous" />
@@ -215,6 +219,7 @@ a {
 
 {% block js_block %}
 {% endblock %}
+
 </body>
 
 </html>
