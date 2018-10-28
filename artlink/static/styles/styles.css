@@ -1,7 +1,6 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .center {
@@ -58,11 +57,7 @@ overflow: hidden;
     width: 100vw;
     bottom: 0;
     z-index: 999;
-<<<<<<< Updated upstream
 	position:fixed;
-=======
-    position: fixed;
->>>>>>> Stashed changes
 }
 
 .links {
@@ -113,18 +108,10 @@ ul.social-network li {
 	margin: 0 5px;
 }
 
-<<<<<<< Updated upstream
-#container1 {
-position:relative;
-}
-
 .container {
   margin-top: 260px;
   float: center;
 }
-
-=======
->>>>>>> Stashed changes
 
 /* footer social icons */
 .social-network a.icoInstagram:hover {
@@ -246,5 +233,5 @@ a {
 .right{
 	color:blue;
 	float:right;
-	
+
 }
