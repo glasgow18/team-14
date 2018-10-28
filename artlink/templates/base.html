@@ -1,25 +1,32 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+{% load staticfiles %}
+
 <html>
 
 <head>
-{% load staticfiles %}
-  <link rel="stylesheet" type="text/css" href="{% static 'styles/styles.css' %}" />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="Discovery">
+  <meta name="viewport" content="width=device-width, initial-scale=1" , shrink-to-fit="no">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
   <!-- Control the behavior of search engine crawling and indexing -->
   <meta name="robots" content="index,follow"><!-- All Search Engines -->
   <meta name="googlebot" content="index,follow"><!-- Google Specific -->
 
   <!-- Identify the software used to build the document (i.e. - WordPress, Dreamweaver) -->
   <meta name="generator" content="django">
+
   <!-- Add to home screen -->
   <meta name="mobile-web-app-capable" content="yes">
 
-  <!--Fallback.js-->
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/styles.css' %}" />
+
+  <!-- any other stylesheet -->
+  {% block css_block %}
+  {% endblock %}
+
+  	<link rel='icon' type='image/png' href="{% static 'images/favicon.png' %}" />
+
   <title>
     {% block title_block %}
     Artlink - Discovery
@@ -29,70 +36,66 @@
 </head>
 
 <body>
-<div class="topnav">
+  <div class="topnav">
     <a class="active" href="#home">Logo Goes Here</a>
     <div class="links">
-        <a href="{% url 'index' %}">Home</a>
-        <a href="{% url 'add' %}">Add</a>
-        <a href="{% url 'browse' %}">Browse</a>
-        <a href="{% url 'about' %}">About</a>
-        <form class="nav-item form-inline my-2 my-lg-0" id="search" action="{% url 'browse' %}" method="GET">
-          <input id="id_q" class="form-control mr-sm-2" name="q" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" id="navbar-search-button" type="submit">Search</button>
-        </form>
+      <a href="{% url 'index' %}">Home</a>
+      <a href="{% url 'add' %}">Add</a>
+      <a href="{% url 'browse' %}">Browse</a>
+      <a href="{% url 'about' %}">About</a>
+      <form class="nav-item form-inline my-2 my-lg-0" id="search" action="{% url 'browse' %}" method="GET">
+        <input id="id_q" class="form-control mr-sm-2" name="q" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" id="navbar-search-button" type="submit">Search</button>
+      </form>
     </div>
-</div>
+  </div>
 
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 
-<div style="padding-left:16px">
+  <div style="padding-left:16px">
 
-</div>
+  </div>
 
-<footer class="footer">
+  <footer class="footer">
     <div class="bottomnav">
-        <div class="socialmedia">
-            <ul class="social-network social-circle">
-                <li><a href="https://www.instagram.com/artlinkedin/" class="icoInstagram" title="Instagram"><i
-                        class="fa fa-instagram"></i></a></li>
-                <li><a href="https://www.facebook.com/ArtlinkEdinburgh" class="icoFacebook" title="Facebook"><i
-                        class="fa fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com/ArtlinkEdin" class="icoTwitter" title="Twitter"><i
-                        class="fa fa-twitter"></i></a></li>
-            </ul>
-            <div>
-            </div>
-</footer>
-{% block body_block %}
+      <div class="socialmedia">
+        <ul class="social-network social-circle">
+          <li><a href="https://www.instagram.com/artlinkedin/" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://www.facebook.com/ArtlinkEdinburgh" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com/ArtlinkEdin" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+        </ul>
+        <div>
+        </div>
+  </footer>
+  {% block body_block %}
 
-{% endblock %}
+  {% endblock %}
 
 </body>
 
+
+<!--Fallback.js-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <!-- Bootstrap Stylesheet -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous" />
 <!--WOW.js-->
 
 <!--Animate.css-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
-      integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" />
 
 <!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"
-        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
 <!-- Bootstrap Popper.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/popper.min.js"
-        integrity="sha256-ST2MecrXrJaAsqmfpk9XRQITlDoyMmUtgKBEndDisSc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/popper.min.js" integrity="sha256-ST2MecrXrJaAsqmfpk9XRQITlDoyMmUtgKBEndDisSc=" crossorigin="anonymous"></script>
 <!-- Bootstrap JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
 
 {% block js_block %}
 {% endblock %}
