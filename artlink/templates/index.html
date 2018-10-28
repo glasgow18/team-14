@@ -16,7 +16,7 @@
 
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid" table align="center">
   <div class="row">
     <div class="col-2">
     </div>
@@ -56,14 +56,11 @@
       $('#search').addClass('open');
       $('#search > form > input[type="search"]').focus();
     });
-
     $('#search, #search button.close').on('click keyup', function(event) {
       if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
         $(this).removeClass('open');
       }
     });
-
-
     //Do not include! This prevents the form from submitting for DEMO purposes only!
     $('form').submit(function(event) {
       event.preventDefault();
