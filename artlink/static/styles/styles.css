@@ -53,11 +53,10 @@ margin: 5px auto;
 
 .bottomnav {
 overflow: hidden;
-    background-color: #333;
     width: 100vw;
-    bottom: 0;
+    bottom: 2px;
     z-index: 999;
-	position:fixed;
+    position:fixed;
 }
 
 .links {
@@ -127,15 +126,6 @@ ul.social-network li {
 }
 .social-network a.icoTwitter:hover {
 	background-color:#33ccff;
-}
-.social-network a.icoGoogle:hover {
-	background-color:#BD3518;
-}
-.social-network a.icoVimeo:hover {
-	background-color:#0590B8;
-}
-.social-network a.icoLinkedin:hover {
-	background-color:#007bb7;
 }
 .social-network a.icoInstagram:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
 .social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
