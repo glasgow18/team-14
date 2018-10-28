@@ -1,72 +1,63 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
+{% block css_block %}
+<style>
+body {
+  background: url("/static/images/background_op.png") no-repeat;
+  background-size: cover;
+}
+</style>
+{% endblock %}
+
 {% block title %}{% endblock %}
 
 {% block body_block %}
 
-<div class="senses container">
+<div id="full-index">
 
-  <div class="d-flex justify-content-center">
-    <form class="form-group form-inline" id="search" action="{% url 'browse' %}" method="GET">
-      <input id="id_q" class="form-group form-control mr-sm-2" name="q" type="search" placeholder="Explore experiences..." aria-label="Search">
-      <button class="btn btn-outline-warning" id="navbar-search-button" type="submit">Search</button>
-    </form>
+  <div class="senses container">
+
+    <div class="d-flex justify-content-center">
+      <form class="form-group form-inline" id="search" action="{% url 'browse' %}" method="GET">
+        <input id="id_q" class="form-group form-control mr-sm-2" name="q" type="search" placeholder="Discover experiences..." aria-label="Search">
+        <button class="btn btn btn-warning" id="navbar-search-button" type="submit">Search</button>
+      </form>
+    </div>
+
+  </div>
+
+
+  <div class="container-fluid">
+    <div class="row col-10">
+      <div class="col-5">
+
+      </div>
+
+      <div class="col-1">
+        <a href="/artlink/browse?q=sound"><img src="{% static 'images/noise.png' %}" class="rounded-circle" class="img-fluid" alt="noise icon" height="50" width="50"></a>
+      </div>
+
+      <div class="col-1">
+        <a href="/artlink/browse?q=watch"><img src="{% static 'images/eye.png' %}" class="rounded-circle" class="img-fluid" alt="sight icon" height="50" width="50"></a>
+      </div>
+
+
+      <div class="col-1">
+        <a href="/artlink/browse?q=smell"><img src="{% static 'images/smell.png' %}" class="rounded-circle" class="img-fluid" alt="smell icon" height="50" width="50"></a>
+      </div>
+
+      <div class="col-1">
+        <a href="/artlink/browse?q=taste"><img src="{% static 'images/taste.png' %}" class="rounded-circle" class="img-fluid" alt="taste icon" height="50" width="50"></a>
+      </div>
+
+      <div class="col-1" id="test">
+        <a href="/artlink/browse?q=feel"><img src="{% static 'images/touch.png' %}" class="rounded-circle" class="img-fluid" alt="touch icon" height="50" width="50"></a>
+      </div>
+    </div>
   </div>
 
 </div>
-
-
-<div class="container-fluid">
-  <div class="row col-10">
-    <div class="col-5">
-
-    </div>
-
-    <div class="col-1">
-      <a href="/artlink/browse?q=sound"><img src="{% static 'images/noise.png' %}" class="rounded-circle" class="img-fluid" alt="noise icon" height="50" width="50"></a>
-    </div>
-
-    <div class="col-1">
-      <a href="/artlink/browse?q=watch"><img src="{% static 'images/eye.png' %}" class="rounded-circle" class="img-fluid" alt="sight icon" height="50" width="50"></a>
-    </div>
-
-
-    <div class="col-1">
-      <a href="/artlink/browse?q=smell"><img src="{% static 'images/smell.png' %}" class="rounded-circle" class="img-fluid" alt="smell icon" height="50" width="50"></a>
-    </div>
-
-    <div class="col-1">
-      <a href="/artlink/browse?q=taste"><img src="{% static 'images/taste.png' %}" class="rounded-circle" class="img-fluid" alt="taste icon" height="50" width="50"></a>
-    </div>
-
-    <div class="col-1" id="test">
-      <a href="/artlink/browse?q=feel"><img src="{% static 'images/touch.png' %}" class="rounded-circle" class="img-fluid" alt="touch icon" height="50" width="50"></a>
-    </div>
-  </div>
-</div>
-
-
 
 
 {% endblock %}
-
-<script>
-  $(function() {
-    $('a[href="#search"]').on('click', function(event) {
-      event.preventDefault();
-      $('#search').addClass('open');
-      $('#search > form > input[type="search"]').focus();
-    });
-    $('#search, #search button.close').on('click keyup', function(event) {
-      if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
-        $(this).removeClass('open');
-      }
-    });
-    //Do not include! This prevents the form from submitting for DEMO purposes only!
-    $('form').submit(function(event) {
-      event.preventDefault();
-      return false;
-    })
-  });
-</script>
