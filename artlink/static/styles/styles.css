@@ -118,9 +118,10 @@ ul.social-network li {
     float: center;
 }
 
-<!--Footer Social Icons -->
+/*Social Media Button hovers*/
+
 .social-network a.icoInstagram:hover {
-    background-color: #e1306c;
+    background-color:#e1306c;
 }
 
 .social-network a.icoFacebook:hover {
@@ -132,7 +133,7 @@ ul.social-network li {
 }
 
 .social-network a.icoInstagram:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
-.social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+{
     color:#fff;
 }
 
@@ -188,7 +189,7 @@ a {
     padding-right: 0 !important;
 }
 
-/*image gallery*/
+/*Image Gallery*/
 
 .image-checkbox {
     cursor: pointer;
