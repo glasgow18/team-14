@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.db import models
 from django.contrib import admin
 from django.template.defaultfilters import slugify
+import uuid
 
 
 #class Review(models.Model):
@@ -23,16 +24,16 @@ class Sense(models.Model):
 class Activity(models.Model):
     title = models.CharField(max_length=100, unique=True)
     features = models.TextField()
-    place = models.CharField(max_length=128, unique=True)
-    cost = models.CharField(max_length=50, unique=True)
-    contact = models.CharField(max_length=128, unique=True)
-    welcomeComment = models.TextField(blank=True)
-    webLink = models.CharField(max_length=128, unique=True)
+    place = models.CharField(max_length=128, unique=False)
+    cost = models.CharField(max_length=50, unique=False)
+    contact = models.CharField(max_length=128, unique=False)
+    welcomeComment = models.TextField(blank=False)
+    webLink = models.CharField(max_length=128, unique=False)
     #review = models.ForeignKey(Review, on_delete=models.CASCADE)
     sense = models.ForeignKey(Sense, on_delete=models.CASCADE)
     description = models.TextField()
 
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(unique=True,default=uuid.uuid1)
 
     def __str__(self):
         self.slug = slugify(self.title)

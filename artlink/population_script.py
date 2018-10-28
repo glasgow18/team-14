@@ -1,6 +1,7 @@
 # Populate local database with sample data
 import json
 import os
+from django.db.utils import OperationalError
 os.environ.setdefault("DJANGO_SETTINGS_MODULE","artlink_project.settings")
 
 import django
@@ -18,13 +19,13 @@ def populate():
 
 
     senses = ["Sound","Smell","Sight","Touch","Taste"]
+        
+    for s in senses:
+        add_senses(s)
 
     
     for a in activities:
         add_activity(a)
-    
-    for s in senses:
-        add_senses(s)
 
 
     print("Population successful!")
@@ -32,8 +33,10 @@ def populate():
 
 def add_activity(activity):
     # This will throw a RuntimeWarning during population, which can be ignored for now.
-    a, created = Activity.objects.get_or_create(title=activity["title"],description = activity["description"],features= activity["features"],place = activity["place"],cost= activity["cost"],contact= activity["contact"],welcomeComment= activity["welcomeComment"],webLink = activity["webLink"])
-    print("Activity added: %s" % e.title)
+
+     a, created = Activity.objects.get_or_create(title=activity["title"],description = activity["description"],features= activity["features"],place = activity["place"],cost= activity["cost"],contact= activity["contact"],welcomeComment= activity["welcomeComment"],webLink = activity["webLink"],sense=Sense.objects.get(sense=activity["sense"]))
+     print("Activity added: %s" % a.title)
+
 
 
 def add_senses(sense):
