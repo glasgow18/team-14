@@ -86,14 +86,6 @@ overflow: hidden;
   color: white;
 }
 
-.row {
-  float: center;
-}
-
-.container-fluid {
-  float: center;
-}
-
 .links input[type=text] {
   float: right;
   padding: 6px;
@@ -117,6 +109,11 @@ ul.social-network li {
 }
 
 .container {
+  margin-top: 260px;
+  float: center;
+}
+
+.container1 {
   margin-top: 260px;
   float: center;
 }
