@@ -1,5 +1,5 @@
 import re
-var = "hive"
+
 from django.db.models import Q
 
 
