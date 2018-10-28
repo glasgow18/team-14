@@ -1,10 +1,17 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-
-{% block title %}Index{% endblock %}
+{% block title %}{% endblock %}
 
 {% block body_block %}
+
+<div class="senses">
+<form class="nav-item form-inline my-2 my-lg-0" id="search" action="{% url 'browse' %}" method="GET">
+  <input id="id_q" class="form-control mr-sm-2" name="q" type="search" placeholder="Explore experiences..." aria-label="Search">
+  <button class="btn btn-outline-warning" id="navbar-search-button" type="submit">Search</button>
+</form>
+</div>
+
 
 <div class="container-fluid">
     <div class="row">

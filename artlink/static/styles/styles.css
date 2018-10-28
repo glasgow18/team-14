@@ -113,6 +113,11 @@ ul.social-network li {
 position:relative;
 }
 
+.container {
+  margin-top: 150px;
+  float: center;
+}
+
 
 /* footer social icons */
 .social-network a.icoInstagram:hover {
@@ -232,6 +237,5 @@ a {
 
 .right{
 	float:right
-	
-}
 
+}
