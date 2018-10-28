@@ -41,7 +41,7 @@
 
   <div class="row">
     <div class="col-3">
-      <p> Feel free to add {{ query_string }}: </p>
+      <p> Feel free to <a href="{% url 'add' %}" alt="link to submit activity form">add an activity</a> related to {{ query_string }}!</p>
     </div>
   </div>
   {% endif %}
