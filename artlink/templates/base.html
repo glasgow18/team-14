@@ -8,6 +8,17 @@ body {
 
 }
 
+.form-control-borderless {
+border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+border: none;
+outline: none;
+box-shadow: none;
+}
+
+
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -139,45 +150,51 @@ a.socialIcon:hover, .socialHoverClass {
 a {
  background-color: #D3D3D3;
 }
+
+
 </style>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Control the behavior of search engine crawling and indexing -->
-  <meta name="robots" content="index,follow"><!-- All Search Engines -->
-  <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+    <!-- Control the behavior of search engine crawling and indexing -->
+    <meta name="robots" content="index,follow"><!-- All Search Engines -->
+    <meta name="googlebot" content="index,follow"><!-- Google Specific -->
 
-  <!-- Identify the software used to build the document (i.e. - WordPress, Dreamweaver) -->
-  <meta name="generator" content="django">
+    <!-- Identify the software used to build the document (i.e. - WordPress, Dreamweaver) -->
+    <meta name="generator" content="django">
 
-  <!-- Add to home screen -->
-  <meta name="mobile-web-app-capable" content="yes">
+    <!-- Add to home screen -->
+    <meta name="mobile-web-app-capable" content="yes">
 
-  <!--Fallback.js-->
-  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}/css/styles.css" />
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <title>A
-    Artlink
-    {% block title_block %}
-    Artlink - Discovery
-    {% endblock %}
-  </title>
+    <!--Fallback.js-->
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}/css/styles.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>A
+        Artlink
+        {% block title_block %}
+        Artlink - Discovery
+        {% endblock %}
+    </title>
 </head>
 
 <body>
 <div class="topnav">
-  <a class="active" href="#home">Logo Goes Here</a>
-<div class="links">
-  <a href="{% url 'index' %}">Home</a>
-  <a href="{% url 'add' %}">Add</a>
-  <a href="{% url 'browse' %}">Browse</a>
-  <a href="{% url 'about' %}">About</a>
-  <input type="text" placeholder="Search..">
-</div>
+    <a class="active" href="#home">Logo Goes Here</a>
+    <div class="links">
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'add' %}">Add</a>
+        <a href="{% url 'browse' %}">Browse</a>
+        <a href="{% url 'about' %}">About</a>
+        <input type="text" placeholder="Search..">
+    </div>
 </div>
 
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -187,35 +204,43 @@ a {
 </div>
 
 <footer class="footer">
-<div class="bottomnav">
-<div class="socialmedia">
-                   <ul class="social-network social-circle">
-                        <li><a href="https://www.instagram.com/artlinkedin/" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="https://www.facebook.com/ArtlinkEdinburgh" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://twitter.com/ArtlinkEdin" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                    </ul>
-<div>
-</div>
+    <div class="bottomnav">
+        <div class="socialmedia">
+            <ul class="social-network social-circle">
+                <li><a href="https://www.instagram.com/artlinkedin/" class="icoInstagram" title="Instagram"><i
+                        class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/ArtlinkEdinburgh" class="icoFacebook" title="Facebook"><i
+                        class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/ArtlinkEdin" class="icoTwitter" title="Twitter"><i
+                        class="fa fa-twitter"></i></a></li>
+            </ul>
+            <div>
+            </div>
 </footer>
-  {% block body_block %}
+{% block body_block %}
 
-  {% endblock %}
+{% endblock %}
 
 </body>
 
 <!-- Bootstrap Stylesheet -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous"/>
 <!--WOW.js-->
 
 <!--Animate.css-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+      integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous"/>
 
 <!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"
+        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
 <!-- Bootstrap Popper.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/popper.min.js" integrity="sha256-ST2MecrXrJaAsqmfpk9XRQITlDoyMmUtgKBEndDisSc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/popper.min.js"
+        integrity="sha256-ST2MecrXrJaAsqmfpk9XRQITlDoyMmUtgKBEndDisSc=" crossorigin="anonymous"></script>
 <!-- Bootstrap JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
 
 {% block js_block %}
 {% endblock %}

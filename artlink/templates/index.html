@@ -6,70 +6,118 @@
 
 {% block body_block %}
 
-
-<p> Pentagon incoming </p>
-
 <div class="container-fluid">
     <div class="row">
+
+
         <div class="col-4">
         </div>
 
         <div class="col-4">
-            <img class="img-fluid" src="{% static "images/artlink.png" %}" alt="Background picture"
-            class="rounded-circle" alt="Cinque
-            Terre" /> <!-- New line -->
+            <img src="{% static 'images/ear.jpg' %}" class="rounded-circle" class="img-fluid" alt="af">
         </div>
 
         <div class="col-4">
+        </div>
+
+    </div>
+    <!--
+    class="rounded-circle"
+    -->
+
+
+    <div class="row">
+        <div class="col-4">
+            <img src="{% static 'images/taste.jpg' %}" class="rounded-circle" alt="af">
+        </div>
+
+        <div class="col-4">
+        </div>
+
+        <div class="col-4">
+            <img src="{% static 'images/eye.jpg' %}" class="rounded-circle" class="img-fluid" alt="af">
+
         </div>
     </div>
 
     <div class="row">
-        <br></div>
-
-
-    <div class="row">
-        <div class="col-4">
-            <img class="img-fluid" src="{% static "images/artlink.png" %}" alt="Background picture"
-            class="rounded-circle" alt="Cinque
-            Terre" /> <!-- New line -->
-
-            <div class="col-4">
+        <div class="col-12">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <form class="card card-sm">
+                        <div class="card-body row no-gutters align-items-center">
+                            <div class="col-auto">
+                                <i class="fas fa-search h4 text-body"></i>
+                            </div>
+                            <!--end of col-->
+                            <div class="col">
+                                <input class="form-control form-control-lg form-control-borderless" type="search"
+                                       placeholder="Search topics or keywords">
+                            </div>
+                            <!--end of col-->
+                            <div class="col-auto">
+                                <button class="btn btn-lg btn-success" type="submit">Search</button>
+                            </div>
+                            <!--end of col-->
+                        </div>
+                    </form>
+                </div>
+                <!--end of col-->
             </div>
-
-            <div class="col-4">
-                <img class="img-fluid" src="{% static "images/artlink.png" %}" alt="Background picture"
-                class="rounded-circle" alt="Cinque
-                alt="Cinque
-                Terre" /> <!-- New line -->
-            </div>
-
-            <div class="row">
-                <br></div>
         </div>
     </div>
+
 
     <div class="row">
         <div class="col-4">
-            <img class="img-fluid" src="{% static "images/artlink.png" %}" alt="Background picture"
-            class="rounded-circle" alt="Cinque
-            alt="Cinque
-            Terre" /> <!-- New line -->
+            <img src="{% static 'images/smell.jpg' %}" class="rounded-circle" class="img-fluid" alt="af">
         </div>
 
         <div class="col-4">
         </div>
 
         <div class="col-4">
-            <img class="img-fluid" src="{% static "images/artlink.png" %}" alt="Background picture"
-            class="rounded-circle" alt="Cinque
-            alt="Cinque
-            Terre" /> <!-- New line -->
+            <img src="{% static 'images/taste.jpg' %}" class="rounded-circle" class="img-fluid" alt="af">
         </div>
 
     </div>
+
 </div>
 
 
+<div class="container-fluid">
+    <div class="row">
 
+    </div>
+</div>
 {% endblock %}
+
+<script>
+    $(function () {
+    $('a[href="#search"]').on('click', function(event) {
+        event.preventDefault();
+        $('#search').addClass('open');
+        $('#search > form > input[type="search"]').focus();
+    });
+
+    $('#search, #search button.close').on('click keyup', function(event) {
+        if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
+            $(this).removeClass('open');
+        }
+    });
+
+
+    //Do not include! This prevents the form from submitting for DEMO purposes only!
+    $('form').submit(function(event) {
+        event.preventDefault();
+        return false;
+    })
+});
+
+
+
+
+
+</script>
+
+
