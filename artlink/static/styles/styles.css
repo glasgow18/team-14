@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-
+padding-top: 100px;
 }
 
 
@@ -107,6 +107,10 @@ ul.social-network {
 ul.social-network li {
 	display: inline;
 	margin: 0 5px;
+}
+
+#container {
+    position: fixed;
 }
 
 
