@@ -55,12 +55,10 @@
                             </div>
                             <!--end of col-->
                             <div class="col">
-                                <input class="form-control form-control-lg form-control-borderless" type="search"
-                                       placeholder="Search topics or keywords">
-                            </div>
-                            <!--end of col-->
-                            <div class="col-auto">
-                                <button class="btn btn-lg btn-success" type="submit">Search</button>
+                              <form class="nav-item form-inline my-2 my-lg-0" id="search" action="{% url 'browse' %}" method="GET">
+                                <input id="id_q" class="form-control mr-sm-2" name="q" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" id="navbar-search-button" type="submit">Search</button>
+                              </form>
                             </div>
                             <!--end of col-->
                         </div>
@@ -131,5 +129,3 @@
 
 
 </script>
-
-

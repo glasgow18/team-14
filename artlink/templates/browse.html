@@ -1,15 +1,38 @@
-
-{% extends 'artlink/base.html' %}
-
+{% extends 'base.html' %}
 {% load staticfiles %}
 
 {% block title %}Browse{% endblock %}
 
 {% block body_block %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Browse</title>
-</head>
-<body>
+{% if found %}
+    <div class="row">
+        <p>Your search for <b>{{ query_string }}</b> returned the following results: </p>
+    </div>
+    <div class="row">
+        <div class="col">
+            {% for activity in found_activities %}
+                <div class="row-2">
+                    <a href="/artlink/activity/{{ activity.slug }}">{{ activity.title }}</a><br/>
+                    <p>{{ place.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+
+{% if query_string %}
+    {% if not found %}
+        <p>No results found for <b>{{ query_string }}</b>.</p>
+
+            <div class="row">
+                <div class="col-3">
+                    <p> Feel free to add {{ query_string }}: </p>
+                </div>
+            </div>
+    {% endif %}
+{% else %}
+    <p>Try to search in the bar above.</p>
+{% endif %}
+
 {% endblock %}

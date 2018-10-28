@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from artlink.forms import *
+from artlink.search import normalize_query, get_query
 
 def index(request):
 
@@ -37,3 +38,19 @@ def submit_activity(request):
 
     # placeholder template: needs to be changed to submit_activity.html
     return render(request, 'add.html', {'activity_form': activity_form})
+
+def search(request):
+    entry = None
+    found_activities = None
+    found = None
+    query_string = ''
+    search_fields = ('title', 'features', 'welcomeComment', 'sense', 'description')
+
+    if ('q' in request.GET) and request.GET['q'].strip():
+        query_string = request.GET['q']
+        entry = get_query(query_string, search_fields)
+        found_activities = Activity.objects.filter(entry).order_by('id')
+
+        found = found_activities.exists()
+
+    return render(request, 'browse.html', {'query_string': query_string, 'found': found, 'found_activities': found_activities})
