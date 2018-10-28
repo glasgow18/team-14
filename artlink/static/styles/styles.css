@@ -225,13 +225,25 @@ a {
 }
 
 .left {
-	color:green;
+    	position: relative;
+    	left: 30px;
 	float:left;
 
 }
 
 .right{
-	color:blue;
+	position: relative;
+	right: 30px;
 	float:right;
+<<<<<<< Updated upstream
 
 }
+=======
+	
+}
+
+.sect{
+	font-size: 15px;
+	border: 5px solid yellow;
+}
+>>>>>>> Stashed changes
