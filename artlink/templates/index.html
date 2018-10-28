@@ -8,96 +8,104 @@
 
 <div class="container-fluid">
     <div class="row">
+            <div class="col-4">
+            </div>
 
+            <div class="col-4">
+                <img option data-img-src="http://placekitten.com/300/200" value="1">Cute Kitten 1</imgoption>
+                <img src="{% static 'images/noise.png' %}" class="rounded-circle" class="img-fluid" alt="af"
+                     height="220"
+                     width="250">
+            </div>
 
-        <div class="col-4">
-        </div>
-
-        <div class="col-4">
-            <img src="{% static 'images/noise.png' %}" class="rounded-circle" class="img-fluid" alt="af" height="220"
-                 width="250">
-        </div>
-
-        <div class="col-4">
-        </div>
-
-    </div>
-    <!--
-    class="rounded-circle"
-    -->
-
-
-    <div class="row">
-        <div class="col-4">
-            <img src="{% static 'images/taste.png' %}" class="rounded-circle" alt="af" height="220" width="250">
-        </div>
-
-        <div class="col-4">
-        </div>
-
-        <div class="col-4">
-            <img src="{% static 'images/eye.png' %}" class="rounded-circle" class="img-fluid" alt="af" height="220"
-                 width="250">
+            <div class="col-4">
+            </div>
 
         </div>
-    </div>
+        <!--
+        class="rounded-circle"
+        -->
 
-    <div class="row">
-        <div class="col-3">
-        </div>
-        <div class="col-6">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-10 col-lg-8">
-                    <form class="card card-sm">
-                        <div class="card-body row no-gutters align-items-center">
-                            <div class="col-auto">
-                                <i class="fas fa-search h4 text-body"></i>
-                            </div>
-                            <!--end of col-->
-                            <div class="col">
-                              <form class="nav-item form-inline my-2 my-lg-0" id="search" action="{% url 'browse' %}" method="GET">
-                                <input id="id_q" class="form-control mr-sm-2" name="q" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success my-2 my-sm-0" id="navbar-search-button" type="submit">Search</button>
-                              </form>
-                            </div>
-                            <!--end of col-->
-                        </div>
-                    </form>
-                </div>
-                <!--end of col-->
+
+        <div class="row">
+            <div class="col-4">
+                <img src="{% static 'images/touch.png' %}" class="rounded-circle" alt="af" height="220" width="250">
+            </div>
+
+            <div class="col-4">
+            </div>
+
+            <div class="col-4">
+                <img src="{% static 'images/eye.png' %}" class="rounded-circle" class="img-fluid" alt="af" height="220"
+                     width="250">
+
             </div>
         </div>
-        <div class="col-3">
+
+        <div class="row">
+            <div class="col-3">
+            </div>
+            <div class="col-6">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-8">
+                        <form class="card card-sm">
+                            <div class="card-body row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <i class="fas fa-search h4 text-body"></i>
+                                </div>
+                                <!--end of col-->
+                                <div class="col">
+                                    <form class="nav-item form-inline my-2 my-lg-0" id="search"
+                                          action="{% url 'browse' %}"
+                                          method="GET">
+                                        <input id="id_q" class="form-control mr-sm-2" name="q" type="search"
+                                               placeholder="Search" aria-label="Search">
+                                        <button class="btn btn-outline-success my-2 my-sm-0" id="navbar-search-button"
+                                                type="submit">Search
+                                        </button>
+                                    </form>
+                                </div>
+                                <!--end of col-->
+                            </div>
+                        </form>
+                    </div>
+                    <!--end of col-->
+                </div>
+            </div>
+            <div class="col-3">
+            </div>
         </div>
-    </div>
 
 
+        <div class="row">
+            <div class="col-4">
+                <img src="{% static 'images/smell.png' %}" class="rounded-circle" class="img-fluid" alt="af"
+                     height="220"
+                     width="250">
+            </div>
 
+            <div class="col-4">
+            </div>
 
-    <div class="row">
-        <div class="col-4">
-            <img src="{% static 'images/smell.png' %}" class="rounded-circle" class="img-fluid" alt="af" height="220"
-                 width="250">
+            <div class="col-4">
+                <img src="{% static 'images/taste.png' %}" class="rounded-circle" class="img-fluid" alt="af"
+                     height="220"
+                     width="250">
+            </div>
+
         </div>
 
-        <div class="col-4">
+
+        <div class="container-fluid">
+            <div class="row">
+
+            </div>
+
+
         </div>
-
-        <div class="col-4">
-            <img src="{% static 'images/taste.png' %}" class="rounded-circle" class="img-fluid" alt="af" height="220"
-                 width="250">
-        </div>
-
-    </div>
-
+    </select>
 </div>
 
-
-<div class="container-fluid">
-    <div class="row">
-
-    </div>
-</div>
 {% endblock %}
 
 <script>
@@ -122,10 +130,6 @@
     })
 });
 
-
-
-
-
-
-
 </script>
+
+

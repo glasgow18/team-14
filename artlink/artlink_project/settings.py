@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
@@ -28,7 +29,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = (
@@ -38,7 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'artlink'
+    'artlink',
+    'bootstrap4',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -66,14 +67,13 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
-                #'artlink.context_processors.user',
+                # 'artlink.context_processors.user',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'artlink_project.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
@@ -98,11 +98,9 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 
 STATICFILES_DIRS = [STATIC_DIR, ]
 STATIC_URL = '/static/'
-
