@@ -224,3 +224,14 @@ a {
   color: #ffc107;
   font-weight: bold;
 }
+
+.left {
+	float:left
+
+}
+
+.right{
+	float:right
+	
+}
+
