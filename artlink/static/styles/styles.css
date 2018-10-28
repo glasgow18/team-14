@@ -249,3 +249,8 @@ a {
 	font-size: 15px;
 	border: 5px solid yellow;
 }
+
+#search {
+  padding-left:5px;
+  padding-bottom: 10px;
+}
