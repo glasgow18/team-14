@@ -5,16 +5,19 @@ from django.contrib import admin
 from django.template.defaultfilters import slugify
 
 
-class Review(models.Model):
-    review =  models.TextField(blank=True)
-    name = models.CharField(max_length=60, unique= True)
+#class Review(models.Model):
+ #   review =  models.TextField(blank=True)
+ #   name = models.CharField(max_length=60, unique= True)
 
-    def __str__(self):
-        return self.name
+  #  def __str__(self):
+   #     return self.name
 
 
 class Sense(models.Model):
     sense = models.CharField(max_length=10, unique= True)
+
+    def __str(self):
+        return self.sense
 
 
 class Activity(models.Model):
@@ -25,7 +28,7 @@ class Activity(models.Model):
     contact = models.CharField(max_length=128, unique=True)
     welcomeComment = models.TextField(blank=True)
     webLink = models.CharField(max_length=128, unique=True)
-    review = models.ForeignKey(Review, on_delete=models.CASCADE)
+    #review = models.ForeignKey(Review, on_delete=models.CASCADE)
     sense = models.ForeignKey(Sense, on_delete=models.CASCADE)
     description = models.TextField()
 

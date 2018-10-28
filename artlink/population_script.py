@@ -18,18 +18,21 @@ def populate():
 
 
     senses = ["Sound","Smell","Sight","Touch","Taste"]
+
+    
+    for a in activities:
+        add_activity(a)
+    
     for s in senses:
         add_senses(s)
 
-    for a in activities:
-        add_activity(a)
 
     print("Population successful!")
 
 
 def add_activity(activity):
     # This will throw a RuntimeWarning during population, which can be ignored for now.
-    a, created = Activity.objects.get_or_create(title=activity["title"],description = activity["description"],features= activity["features"],place = activity["place"],cost= activity["cost"],contact= activity["contact"],welcomeComment= activity["welcomeComment"],webLink = activity["webLink"],review = activity["reviews"])
+    a, created = Activity.objects.get_or_create(title=activity["title"],description = activity["description"],features= activity["features"],place = activity["place"],cost= activity["cost"],contact= activity["contact"],welcomeComment= activity["welcomeComment"],webLink = activity["webLink"])
     print("Activity added: %s" % e.title)
 
 
