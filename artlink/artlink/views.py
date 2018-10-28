@@ -11,6 +11,10 @@ def add(request):
 
     return render(request, 'add.html')
 
+def faq(request):
+
+    return render(request, 'faq.html')
+
 def about(request):
 
 

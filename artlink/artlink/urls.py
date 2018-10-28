@@ -9,5 +9,6 @@ urlpatterns = [
     url(r'^add$', views.submit_activity, name='add'),
     url(r'^browse$', views.browse, name='browse'),
     url(r'^about$', views.about, name='about'),
+    url(r'^faq$', views.faq, name='faq'),
     url(r'^index$', views.index, name='index'),
 ]
