@@ -5,6 +5,7 @@ from django.contrib import admin
 from django.template.defaultfilters import slugify
 import uuid
 
+# TODO Review model (comes with implement a form, the view, the template, etc.)
 
 #class Review(models.Model):
  #   review =  models.TextField(blank=True)
@@ -14,6 +15,7 @@ import uuid
    #     return self.name
 
 
+#TODO should we make sense a choice field?
 class Sense(models.Model):
     sense = models.CharField(max_length=10, unique= True)
 

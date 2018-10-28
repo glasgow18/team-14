@@ -1,8 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
 from artlink.models import Activity, Sense
-
+# TODO register Review once the model has been set up
 
 admin.site.register(Activity)
 admin.site.register(Sense)

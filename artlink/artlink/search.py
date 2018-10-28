@@ -1,8 +1,7 @@
 import re
-
 from django.db.models import Q
 
-# credit goes to @julienphalip.com
+# all credit goes to @julienphalip.com
 
 def normalize_query(query_string,
                     findterms=re.compile(r'"([^"]+)"|(\S+)').findall,

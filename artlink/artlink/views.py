@@ -28,7 +28,7 @@ def show_activity(request, activity_slug):
 
 
 def submit_activity(request):
-    # process form data only if it's a position
+    # process form data only if it's a post request
     if request.method == 'POST':
         activity_form = SubmitActivityForm(data=request.POST)
         if activity_form.is_valid():
@@ -37,7 +37,8 @@ def submit_activity(request):
     else:
         activity_form = SubmitActivityForm()
 
-    # placeholder template: needs to be changed to submit_activity.html
+    # TODO placeholder template: needs to be changed to submit_activity.html
+    # DEBUG needed, submit form does not work with current models
     return render(request, 'add.html', {'activity_form': activity_form})
 
 
@@ -46,6 +47,8 @@ def browse(request):
     found_activities = None
     found = None
     query_string = ''
+    # this is the data the search function will look through
+    # TODO sense needs to be added to this, but this comes with debugging the model/choicefield add
     search_fields = ('title', 'features', 'welcomeComment', 'description')
 
     if ('q' in request.GET) and request.GET['q'].strip():
@@ -55,6 +58,7 @@ def browse(request):
         #Order the Activity objects found by order of id
         found_activities = Activity.objects.filter(entry).order_by('id')
 
+        # only display activities if some are actually found
         found = found_activities.exists()
 
     return render(request, 'browse.html',

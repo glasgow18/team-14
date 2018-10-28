@@ -1,6 +1,9 @@
 from django import forms
 from artlink.models import Sense, Activity
 
+#TODO figure out how to collate features, welcomeComment, description
+#TODO figure out how to provide a choice menu for senses
+
 class SubmitActivityForm(forms.ModelForm):
     title = forms.CharField(max_length=100, required=True)
     features = forms.CharField(max_length=400, required=True)

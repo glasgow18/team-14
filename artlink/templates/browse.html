@@ -7,16 +7,12 @@
   <!-- Browse input -->
 <div class="container">
   <div class="row">
-    <form class="form-inline" id="body-search-form" action="{% url 'browse' %}" method="GET">
-      <div class="row search">
-        <div class="col">
-          <input id="body-search-bar" class="form-control mr-sm-2" name="q" type="search" placeholder="Explore more..." aria-label="Search">
-        </div>
-        <div class="col-xs">
-          <button class="btn btn-outline-warning" type="submit">Search</button>
-        </div>
-      </div>
-    </form>
+    <div class="d-flex justify-content-center">
+      <form class="form-group form-inline" id="search" action="{% url 'browse' %}" method="GET">
+        <input id="id_q" class="form-group form-control mr-sm-2" name="q" type="search" placeholder="Discover experiences..." aria-label="Search">
+        <button class="btn btn btn-warning" id="navbar-search-button" type="submit">Search</button>
+      </form>
+    </div>
   </div>
   <!-- If found, returns result -->
   {% if found %}

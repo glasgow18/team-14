@@ -1,36 +1,32 @@
-"""
-Django settings for artlink project.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/1.7/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.7/ref/settings/
-"""
-
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# DOC Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+
+from keys import *
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+# TODO what's the difference between those two? @all
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [STATIC_DIR, ]
 
 # Dynamic pathing to the templates folder
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
+STATIC_URL = '/static/'
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'h_=nk25jt5vrxdddktvp+l+s044io=8v6at$2y(%uuj1b3sus-'
+# in keys.py file
+SECRET_KEY = django_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# TODO add 404 page to be able to turn Debug to False
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
 # Application definition
 
+# bootstrap installed with django to fasten beautify
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -75,18 +71,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'artlink_project.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/1.7/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
-# Internationalization
-# https://docs.djangoproject.com/en/1.7/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
@@ -97,10 +87,3 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.7/howto/static-files/
-
-
-STATICFILES_DIRS = [STATIC_DIR, ]
-STATIC_URL = '/static/'
