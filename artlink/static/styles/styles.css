@@ -53,17 +53,21 @@ margin: 5px auto;
 }
 
 .bottomnav {
-    overflow: hidden;
-    background-color: #c4c4c4;
+overflow: hidden;
+    background-color: #333;
     width: 100vw;
     bottom: 0;
     z-index: 999;
+<<<<<<< Updated upstream
 	position:fixed;
+=======
+    position: fixed;
+>>>>>>> Stashed changes
 }
 
 .links {
   overflow: hidden;
-  background-color: #c4c4c4;
+  background-color: #333;
     text-align: right;
     float: right;
 }
@@ -109,6 +113,7 @@ ul.social-network li {
 	margin: 0 5px;
 }
 
+<<<<<<< Updated upstream
 #container1 {
 position:relative;
 }
@@ -118,6 +123,8 @@ position:relative;
   float: center;
 }
 
+=======
+>>>>>>> Stashed changes
 
 /* footer social icons */
 .social-network a.icoInstagram:hover {
@@ -231,11 +238,13 @@ a {
 }
 
 .left {
-	float:left
+	color:green;
+	float:left;
 
 }
 
 .right{
-	float:right
-
+	color:blue;
+	float:right;
+	
 }
