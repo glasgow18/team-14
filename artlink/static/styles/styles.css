@@ -4,6 +4,49 @@ body {
 
 }
 
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.para1 {
+  position: absolute;
+  width: 600px;
+  height: 200px;
+  z-index: 15;
+  top: 50%;
+  left: 28%;
+  margin: -100px 0 0 -
+}
+
+.para2 {
+  position: absolute;
+  width: 600px;
+  height: 200px;
+  z-index: 15;
+  top: 80%;
+  left: 28%;
+  margin: -100px 0 0 -
+}
+
+h2 {
+    font: 600 1.5em/1 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+}
+hr {
+height: 100px;
+margin: 5px auto;
+}
+
 .topnav {
   overflow: hidden;
   background-color: #333;
