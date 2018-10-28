@@ -25,20 +25,188 @@
     Artlink - Discovery
     {% endblock %}
   </title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.form-control-borderless {
+border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+border: none;
+outline: none;
+box-shadow: none;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+    font: 600 1.5em/1 'Raleway', sans-serif;
+}
+
+.bottomnav {
+overflow: hidden;
+    background-color: #333;
+    width: 100vw;
+    bottom: 0;
+    z-index: 999;
+    position: fixed;
+}
+
+.links {
+  overflow: hidden;
+  background-color: #333;
+    text-align: right;
+    float: right;
+}
+
+.socialmedia {
+    text-align: center;
+    float: center;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.topnav a.active {
+  color: white;
+}
+
+.links input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px;
+}
+ul.social-network {
+	list-style: none;
+	display: inline;
+	margin-left:0 !important;
+	padding: 0;
+    text-align: center;
+    float: center;
+}
+ul.social-network li {
+	display: inline;
+	margin: 0 5px;
+}
+
+
+/* footer social icons */
+.social-network a.icoInstagram:hover {
+	background-color: #e1306c;
+}
+.social-network a.icoFacebook:hover {
+	background-color:#3B5998;
+}
+.social-network a.icoTwitter:hover {
+	background-color:#33ccff;
+}
+.social-network a.icoGoogle:hover {
+	background-color:#BD3518;
+}
+.social-network a.icoVimeo:hover {
+	background-color:#0590B8;
+}
+.social-network a.icoLinkedin:hover {
+	background-color:#007bb7;
+}
+.social-network a.icoInstagram:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+.social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+	color:#fff;
+}
+a.socialIcon:hover, .socialHoverClass {
+	color:#44BCDD;
+}
+
+.social-circle li a {
+	display:inline-block;
+	position:relative;
+	margin:0 auto 0 auto;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	text-align:center;
+	width: 50px;
+	height: 50px;
+	font-size:20px;
+}
+.social-circle li i {
+	margin:0;
+	line-height:50px;
+	text-align: center;
+}
+
+.social-circle li a:hover i, .triggeredHover {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms--transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.social-circle i {
+	color:#fff;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+a {
+ background-color: #D3D3D3;
+}
+
+.container {
+height: 600px;
+}
+
+
+
+.container  .img-responsive {
+    display: block;
+    width: auto;
+    max-height: 100%;
+}
+
+</style>
+
 </head>
 
 <body>
 <div class="topnav">
-  <a class="active" href="#home">Logo Goes Here</a>
-<div class="links">
-  <a href="{% url 'index' %}">Home</a>
-  <a href="{% url 'add' %}">Add</a>
-  <a href="{% url 'browse' %}">Browse</a>
-  <a href="{% url 'about' %}">About</a>
-  <input type="text" placeholder="Search..">
-</div>
+    <a class="active" href="#home">Logo Goes Here</a>
+    <div class="links">
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'add' %}">Add</a>
+        <a href="{% url 'browse' %}">Browse</a>
+        <a href="{% url 'about' %}">About</a>
+        <input type="text" placeholder="Search..">
+    </div>
 </div>
 
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -48,35 +216,43 @@
 </div>
 
 <footer class="footer">
-<div class="bottomnav">
-<div class="socialmedia">
-                   <ul class="social-network social-circle">
-                        <li><a href="https://www.instagram.com/artlinkedin/" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="https://www.facebook.com/ArtlinkEdinburgh" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://twitter.com/ArtlinkEdin" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                    </ul>
-<div>
-</div>
+    <div class="bottomnav">
+        <div class="socialmedia">
+            <ul class="social-network social-circle">
+                <li><a href="https://www.instagram.com/artlinkedin/" class="icoInstagram" title="Instagram"><i
+                        class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/ArtlinkEdinburgh" class="icoFacebook" title="Facebook"><i
+                        class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/ArtlinkEdin" class="icoTwitter" title="Twitter"><i
+                        class="fa fa-twitter"></i></a></li>
+            </ul>
+            <div>
+            </div>
 </footer>
-  {% block body_block %}
+{% block body_block %}
 
-  {% endblock %}
+{% endblock %}
 
 </body>
 
 <!-- Bootstrap Stylesheet -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous"/>
 <!--WOW.js-->
 
 <!--Animate.css-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+      integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous"/>
 
 <!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"
+        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
 <!-- Bootstrap Popper.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/popper.min.js" integrity="sha256-ST2MecrXrJaAsqmfpk9XRQITlDoyMmUtgKBEndDisSc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/popper.min.js"
+        integrity="sha256-ST2MecrXrJaAsqmfpk9XRQITlDoyMmUtgKBEndDisSc=" crossorigin="anonymous"></script>
 <!-- Bootstrap JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
 
 {% block js_block %}
 {% endblock %}

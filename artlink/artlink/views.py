@@ -1,6 +1,6 @@
 from django.shortcuts import render
-
 from django.http import HttpResponse
+from artlink.forms import *
 
 def index(request):
 
@@ -10,19 +10,30 @@ def index(request):
 def add(request):
 
 
-    return render(request, 'templates/add.html')
+    return render(request, 'add.html')
 
 def browse(request):
 
 
-    return render(request, 'templates/browse.html')
+    return render(request, 'browse.html')
 
 def about(request):
 
 
     return render(request, 'about.html')
 
-def activity_show(request, activity_slug):
+def show_activity(request, activity_slug):
+    return render(request, 'category.html')
 
+def submit_activity(request):
+    # process form data only if it's a position
+    if request.method == 'POST':
+        activity_form = SubmitActivityForm(data=request.POST)
+        if activity_form.is_valid():
+            activity = activity_form.save()
+            return show_activity(request, activity.slug)
+    else:
+        activity_form = SubmitActivityForm()
 
-    return render(request, 'templates/category.html')
+    # placeholder template: needs to be changed to submit_activity.html
+    return render(request, 'index.html')
