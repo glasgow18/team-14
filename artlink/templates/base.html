@@ -38,28 +38,28 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <img class="d-inline-block align-top" id="logo" src="{% static 'images/logo.png' %}" alt="Logo" width="60" height="60" href="/">
+    <a href="/" alt="website logo"><img class="d-inline-block align-top" id="logo" src="{% static 'images/logo.png' %}" alt="Logo" width="60" height="60"></a>
     <tbody>
       <tr id="logo-text">
-        <td class="align-top"><span><strong>linking people</strong>  | through  <a id="artlink-link" href="https://www.artlinkedinburgh.co.uk/" alt="Artlink website">senses</a></span></td>
+        <td class="align-top"><span><strong>linking people</strong> | through <a id="artlink-link" href="https://www.artlinkedinburgh.co.uk/" alt="Artlink website">senses</a></span></td>
       </tr>
     </tbody>
     <div class="navbar-collapse collapse justify-content-end">
 
-    <ul class="nav navbar-nav navbar-brand navbar-right">
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'about' %}">About</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'browse' %}">Explore</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
-      </li>
-    </ul>
+      <ul class="nav navbar-nav navbar-brand navbar-right">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'about' %}">About</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'browse' %}">Explore</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+        </li>
+      </ul>
       <span class="navbar-text">
         <form class="nav-item form-inline my-2 my-lg-0" id="search" action="{% url 'browse' %}" method="GET">
-          <input id="id_q" class="form-control mr-sm-2" name="q" type="search" placeholder="Search" aria-label="Search">
+          <input id="id_q" class="form-control mr-sm-2" name="q" type="search" placeholder="Explore experiences..." aria-label="Search">
           <button class="btn btn-outline-warning" id="navbar-search-button" type="submit">Search</button>
         </form>
       </span>
@@ -67,16 +67,8 @@
   </nav>
 
 
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
-
-  <div style="padding-left:16px">
-
-  </div>
+  {% block body_block %}
+  {% endblock %}
 
   <footer class="footer">
     <div class="bottomnav">
@@ -89,33 +81,26 @@
         <div>
         </div>
   </footer>
-  {% block body_block %}
 
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <!--Fallback.js-->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <!-- Bootstrap Stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous" />
+
+  <!--Animate.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" />
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+  <!-- Bootstrap Popper.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/popper.min.js" integrity="sha256-ST2MecrXrJaAsqmfpk9XRQITlDoyMmUtgKBEndDisSc=" crossorigin="anonymous"></script>
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
+
+  {% block js_block %}
   {% endblock %}
-
-</body>
-
-
-<!--Fallback.js-->
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-<!-- Bootstrap Stylesheet -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous" />
-<!--WOW.js-->
-
-<!--Animate.css-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" />
-
-<!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
-<!-- Bootstrap Popper.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/popper.min.js" integrity="sha256-ST2MecrXrJaAsqmfpk9XRQITlDoyMmUtgKBEndDisSc=" crossorigin="anonymous"></script>
-<!-- Bootstrap JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
-
-{% block js_block %}
-{% endblock %}
-
 </body>
 
 </html>

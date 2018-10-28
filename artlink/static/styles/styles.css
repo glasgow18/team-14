@@ -54,17 +54,16 @@ margin: 5px auto;
 }
 
 .bottomnav {
-overflow: hidden;
-    background-color: #333;
+    overflow: hidden;
+    background-color: #c4c4c4;
     width: 100vw;
     bottom: 0;
     z-index: 999;
-    position: fixed;
 }
 
 .links {
   overflow: hidden;
-  background-color: #333;
+  background-color: #c4c4c4;
     text-align: right;
     float: right;
 }
