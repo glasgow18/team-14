@@ -21,7 +21,9 @@ def about(request):
     return render(request, 'about.html')
 
 def show_activity(request, activity_slug):
-    return render(request, 'activity.html')
+    aData = Activity.objects.get(slug=activity_slug)
+    context_dict = {"aData":aData}
+    return render(request, 'activity.html',context=context_dict)
 
 def submit_activity(request):
     # process form data only if it's a position
