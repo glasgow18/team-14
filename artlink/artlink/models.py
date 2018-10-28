@@ -32,4 +32,5 @@ class Activity(models.Model):
     slug = models.SlugField(unique=True)
 
     def __str__(self):
+        self.slug = slugify(self.title)
         return self.title
