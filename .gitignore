@@ -10,3 +10,4 @@ lib/*
 __pycache__
 pyvenv.cfg
 artlink/cfg/lib64
+**/migrations/*
