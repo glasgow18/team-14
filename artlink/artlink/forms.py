@@ -1,5 +1,5 @@
 from django import forms
-from artlink.models import Review, Sense, Activity
+from artlink.models import Sense, Activity
 
 class SubmitActivityForm(forms.ModelForm):
     title = forms.CharField(max_length=100, required=True)

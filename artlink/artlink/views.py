@@ -23,7 +23,7 @@ def about(request):
     return render(request, 'about.html')
 
 def show_activity(request, activity_slug):
-    return render(request, 'category.html')
+    return render(request, 'activity.html')
 
 def submit_activity(request):
     # process form data only if it's a position
@@ -36,4 +36,4 @@ def submit_activity(request):
         activity_form = SubmitActivityForm()
 
     # placeholder template: needs to be changed to submit_activity.html
-    return render(request, 'index.html')
+    return render(request, 'add.html', {'activity_form': activity_form})

@@ -1,14 +1,22 @@
-{% extends 'artlink/base.html' %}
-
+{% extends 'base.html' %}
 {% load staticfiles %}
 
-{% block title %}Art{% endblock %}
+{% block title %}Add Activity{% endblock %}
 
 {% block body_block %}
+<div class="container" id="activity-container">
+  <h1>Submit an Activity</h1>
+  <br>
+  <form id="activity_form" method="post" action="{% url 'add' %}" enctype="multipart/form-data">
+    {% csrf_token %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Add</title>
-</head>
-<body>
+    <!-- Display each form bootstrapped -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    {{ activity_form }}
+
+    <br>
+    <!-- Provide a button to click to submit the form -->
+    <button type="submit" class="btn btn-primary" id="add-button" name="submit" value="Register">Submit</button>
+  </form>
+</div>
 {% endblock %}
