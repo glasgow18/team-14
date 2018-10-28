@@ -8,7 +8,7 @@ import django
 django.setup()
 
 from artlink.models import *
-print("hie")
+
 def populate():
 
     # Load sample data from files
@@ -19,11 +19,11 @@ def populate():
 
 
     senses = ["Sound","Smell","Sight","Touch","Taste"]
-        
+
     for s in senses:
         add_senses(s)
 
-    
+
     for a in activities:
         add_activity(a)
 
