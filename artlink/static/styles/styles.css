@@ -211,3 +211,12 @@ a {
 .image-checkbox-checked .fa {
   display: block !important;
 }
+
+#logo {
+  margin-right: 5px;
+}
+
+#artlink-link {
+  color: #ffc107;
+  font-weight: bold;
+}

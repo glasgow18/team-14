@@ -25,31 +25,46 @@
   {% block css_block %}
   {% endblock %}
 
-  	<link rel='icon' type='image/png' href="{% static 'images/favicon.png' %}" />
+  <link rel='icon' type='image/png' href="{% static 'images/favicon.png' %}" />
 
   <title>
+    5S —
     {% block title_block %}
-    Artlink - Discovery
+    linking people through experiences
     {% endblock %}
   </title>
 
 </head>
 
 <body>
-  <div class="topnav">
-    <a class="active" href="#home">Logo Goes Here</a>
-    <div class="links">
-      <a href="{% url 'index' %}">Home</a>
-      <a href="{% url 'add' %}">Add</a>
-      <a href="{% url 'browse' %}">Browse</a>
-      <a href="{% url 'about' %}">About</a>
-      <a href="{% url 'faq' %}">FAQ</a>
-      <form class="nav-item form-inline my-2 my-lg-0" id="search" action="{% url 'browse' %}" method="GET">
-        <input id="id_q" class="form-control mr-sm-2" name="q" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" id="navbar-search-button" type="submit">Search</button>
-      </form>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <img class="d-inline-block align-top" id="logo" src="{% static 'images/logo.png' %}" alt="Logo" width="60" height="60" href="/">
+    <tbody>
+      <tr id="logo-text">
+        <td class="align-top"><span><strong>linking people</strong>  | through  <a id="artlink-link" href="https://www.artlinkedinburgh.co.uk/" alt="Artlink website">senses</a></span></td>
+      </tr>
+    </tbody>
+    <div class="navbar-collapse collapse justify-content-end">
+
+    <ul class="nav navbar-nav navbar-brand navbar-right">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'about' %}">About</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'browse' %}">Explore</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+      </li>
+    </ul>
+      <span class="navbar-text">
+        <form class="nav-item form-inline my-2 my-lg-0" id="search" action="{% url 'browse' %}" method="GET">
+          <input id="id_q" class="form-control mr-sm-2" name="q" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-warning" id="navbar-search-button" type="submit">Search</button>
+        </form>
+      </span>
     </div>
-  </div>
+  </nav>
 
 
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
