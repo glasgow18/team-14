@@ -39,12 +39,12 @@ def submit_activity(request):
     # placeholder template: needs to be changed to submit_activity.html
     return render(request, 'add.html', {'activity_form': activity_form})
 
-def search(request):
+def browse(request):
     entry = None
     found_activities = None
     found = None
     query_string = ''
-    search_fields = ('title', 'features', 'welcomeComment', 'sense', 'description')
+    search_fields = ('title', 'features', 'welcomeComment', 'description')
 
     if ('q' in request.GET) and request.GET['q'].strip():
         query_string = request.GET['q']
