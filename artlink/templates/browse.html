@@ -4,7 +4,7 @@
 {% block title %}explore{% endblock %}
 
 {% block body_block %}
-
+  <!-- Browse input -->
 <div class="container">
   <div class="row">
     <form class="form-inline" id="body-search-form" action="{% url 'browse' %}" method="GET">
@@ -18,7 +18,7 @@
       </div>
     </form>
   </div>
-
+  <!-- If found, returns result -->
   {% if found %}
   <div class="row">
     <p>Your search for <b>{{ query_string }}</b> returned the following results: </p>
@@ -35,10 +35,12 @@
   </div>
   {% endif %}
 
+
   {% if query_string %}
   {% if not found %}
   <p>No results found for <b>{{ query_string }}</b>.</p>
 
+  <!-- Add an activity related to query -->
   <div class="row">
     <div class="col-3">
       <p> Feel free to <a href="{% url 'add' %}" alt="link to submit activity form">add an activity</a> related to {{ query_string }}!</p>

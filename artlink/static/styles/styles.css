@@ -40,19 +40,20 @@ h2 {
     top: 40%;
     width: 100%;
 }
+
 hr {
-height: 100px;
-margin: 5px auto;
+    height: 100px;
+    margin: 5px auto;
 }
 
 .topnav {
-  overflow: hidden;
-  background-color: #333;
+    overflow: hidden;
+    background-color: #333;
     font: 600 1.5em/1 'Raleway', sans-serif;
 }
 
 .bottomnav {
-overflow: hidden;
+    overflow: hidden;
     width: 100vw;
     bottom: 2px;
     z-index: 999;
@@ -60,8 +61,8 @@ overflow: hidden;
 }
 
 .links {
-  overflow: hidden;
-  background-color: #333;
+    overflow: hidden;
+    background-color: #333;
     text-align: right;
     float: right;
 }
@@ -72,172 +73,181 @@ overflow: hidden;
 }
 
 .topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: right;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+    float: left;
+    color: #f2f2f2;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
-
 .topnav a.active {
-  color: white;
+    color: white;
 }
 
 .links input[type=text] {
-  float: right;
-  padding: 6px;
-  margin-top: 8px;
-  margin-right: 16px;
-  border: none;
-  font-size: 17px;
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    border: none;
+    font-size: 17px;
 }
 
 ul.social-network {
-	list-style: none;
-	display: inline;
-	margin-left:0 !important;
-	padding: 0;
+    list-style: none;
+    display: inline;
+    margin-left:0 !important;
+    padding: 0;
     text-align: center;
     float: center;
 }
+
 ul.social-network li {
-	display: inline;
-	margin: 0 5px;
+    display: inline;
+    margin: 0 5px;
 }
 
 .container {
-  margin-top: 260px;
-  float: center;
+    margin-top: 260px;
+    float: center;
 }
 
 .container1 {
-  margin-top: 260px;
-  float: center;
+    margin-top: 260px;
+    float: center;
 }
 
-/* footer social icons */
+<!--Footer Social Icons -->
 .social-network a.icoInstagram:hover {
-	background-color: #e1306c;
+    background-color: #e1306c;
 }
+
 .social-network a.icoFacebook:hover {
-	background-color:#3B5998;
+    background-color:#3B5998;
 }
+
 .social-network a.icoTwitter:hover {
-	background-color:#33ccff;
+    background-color:#33ccff;
 }
+
 .social-network a.icoInstagram:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
 .social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
-	color:#fff;
+    color:#fff;
 }
+
 a.socialIcon:hover, .socialHoverClass {
-	color:#44BCDD;
+    color:#44BCDD;
 }
 
 .social-circle li a {
-	display:inline-block;
-	position:relative;
-	margin:0 auto 0 auto;
-	-moz-border-radius:50%;
-	-webkit-border-radius:50%;
-	border-radius:50%;
-	text-align:center;
-	width: 50px;
-	height: 50px;
-	font-size:20px;
+    display:inline-block;
+    position:relative;
+    margin:0 auto 0 auto;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    border-radius:50%;
+    text-align:center;
+    width: 50px;
+    height: 50px;
+    font-size:20px;
 }
+
 .social-circle li i {
-	margin:0;
-	line-height:50px;
-	text-align: center;
+    margin:0;
+    line-height:50px;
+    text-align: center;
 }
 
 .social-circle li a:hover i, .triggeredHover {
-	-moz-transform: rotate(360deg);
-	-webkit-transform: rotate(360deg);
-	-ms--transform: rotate(360deg);
-	transform: rotate(360deg);
-	-webkit-transition: all 0.2s;
-	-moz-transition: all 0.2s;
-	-o-transition: all 0.2s;
-	-ms-transition: all 0.2s;
-	transition: all 0.2s;
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
 }
 .social-circle i {
-	color:#fff;
-	-webkit-transition: all 0.8s;
-	-moz-transition: all 0.8s;
-	-o-transition: all 0.8s;
-	-ms-transition: all 0.8s;
-	transition: all 0.8s;
+    color:#fff;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
 }
 
 a {
- background-color: #D3D3D3;
+    background-color: #D3D3D3;
 }
 
 .nopad {
-	padding-left: 0 !important;
-	padding-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
+
 /*image gallery*/
+
 .image-checkbox {
-	cursor: pointer;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	border: 4px solid transparent;
-	margin-bottom: 0;
-	outline: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 4px solid transparent;
+    margin-bottom: 0;
+    outline: 0;
 }
+
 .image-checkbox input[type="checkbox"] {
-	display: none;
+    display: none;
 }
 
 .image-checkbox-checked {
-	border-color: #4783B0;
+    border-color: #4783B0;
 }
+
 .image-checkbox .fa {
-  position: absolute;
-  color: #4A79A3;
-  background-color: #fff;
-  padding: 10px;
-  top: 0;
-  right: 0;
+    position: absolute;
+    color: #4A79A3;
+    background-color: #fff;
+    padding: 10px;
+    top: 0;
+    right: 0;
 }
+
 .image-checkbox-checked .fa {
-  display: block !important;
+    display: block !important;
 }
 
 #logo {
-  margin-right: 5px;
+    margin-right: 5px;
 }
 
 #artlink-link {
-  color: #ffc107;
-  font-weight: bold;
+    color: #ffc107;
+    font-weight: bold;
 }
 
 .left {
-    	position: relative;
-    	left: 30px;
-	float:left;
-
+    position: relative;
+    left: 30px;
+    float:left;
 }
 
 .right{
-	position: relative;
-	right: 30px;
-	float:right;
+    position: relative;
+    right: 30px;
+    float:right;
 }
 
 .sect{
-	font-size: 15px;
-	border: 5px solid yellow;
+    font-size: 15px;
+    border: 5px solid yellow;
 }
 
 #search {
-  padding-left:5px;
-  padding-bottom: 10px;
+    padding-left:5px;
+    padding-bottom: 10px;
 }

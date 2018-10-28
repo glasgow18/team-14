@@ -7,45 +7,48 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" , shrink-to-fit="no">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-
+  
   <!-- Control the behavior of search engine crawling and indexing -->
   <meta name="robots" content="index,follow"><!-- All Search Engines -->
   <meta name="googlebot" content="index,follow"><!-- Google Specific -->
-
+  
   <!-- Identify the software used to build the document (i.e. - WordPress, Dreamweaver) -->
   <meta name="generator" content="django">
-
+  
   <!-- Add to home screen -->
   <meta name="mobile-web-app-capable" content="yes">
-
+  
   <!-- Main stylesheet -->
   <link rel="stylesheet" type="text/css" href="{% static 'styles/styles.css' %}" />
-
+  
   <!-- any other stylesheet -->
   {% block css_block %}
   {% endblock %}
-
+  
   <link rel='icon' type='image/png' href="{% static 'images/favicon.png' %}" />
-
+  
   <title>
     5S —
     {% block title_block %}
     linking people through experiences
     {% endblock %}
   </title>
-
+  
 </head>
 
 <body>
+  <!-- Logo -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <a href="/" alt="website logo"><img class="d-inline-block align-top" id="logo" src="{% static 'images/logo.png' %}" alt="Logo" width="60" height="60"></a>
     <tbody>
+      <!-- Slogan -->
       <tr id="logo-text">
         <td class="align-top"><span><strong>linking people</strong> | through <a id="artlink-link" href="https://www.artlinkedinburgh.co.uk/" alt="Artlink website">senses</a></span></td>
       </tr>
     </tbody>
+    <!-- Navigable Links -->
     <div class="navbar-collapse collapse justify-content-end">
-
+      
       <ul class="nav navbar-nav navbar-brand navbar-right">
         <li class="nav-item active">
           <a class="nav-link" href="{% url 'about' %}">About</a>
@@ -57,44 +60,43 @@
           <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
         </li>
       </ul>
-      <!-- remove search bar
+      <!-- Search bar top right if changing design
       <span class="navbar-text">
-        <form class="nav-item form-inline my-2 my-lg-0" id="search" action="{% url 'browse' %}" method="GET">
-          <input id="id_q" class="form-control mr-sm-2" name="q" type="search" placeholder="Explore experiences..." aria-label="Search">
-          <button class="btn btn-outline-warning" id="navbar-search-button" type="submit">Search</button>
-        </form>
-      </span>
-    -->
-    </div>
-  </nav>
+      <form class="nav-item form-inline my-2 my-lg-0" id="search" action="{% url 'browse' %}" method="GET">
+      <input id="id_q" class="form-control mr-sm-2" name="q" type="search" placeholder="Explore experiences..." aria-label="Search">
+      <button class="btn btn-outline-warning" id="navbar-search-button" type="submit">Search</button>
+    </form>
+  </span>
+-->
+</div>
+</nav>
 
+{% block body_block %}
+{% endblock %}
 
-  {% block body_block %}
-  {% endblock %}
+<footer class="footer">
+  
+</footer>
+<!--Font Awesome CSS-->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<!--Fallback.js-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-  <footer class="footer">
+<!-- Bootstrap Stylesheet -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous" />
 
-  </footer>
+<!--Animate.css-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" />
 
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <!--Fallback.js-->
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+<!-- Bootstrap Popper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/popper.min.js" integrity="sha256-ST2MecrXrJaAsqmfpk9XRQITlDoyMmUtgKBEndDisSc=" crossorigin="anonymous"></script>
+<!-- Bootstrap JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
 
-  <!-- Bootstrap Stylesheet -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous" />
-
-  <!--Animate.css-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" />
-
-  <!-- jQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
-  <!-- Bootstrap Popper.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/popper.min.js" integrity="sha256-ST2MecrXrJaAsqmfpk9XRQITlDoyMmUtgKBEndDisSc=" crossorigin="anonymous"></script>
-  <!-- Bootstrap JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
-
-  {% block js_block %}
-  {% endblock %}
+{% block js_block %}
+{% endblock %}
 </body>
 
 </html>

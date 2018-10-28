@@ -3,12 +3,14 @@
 
 {% block css_block %}
 <!-- TODO remove hardcoded static URL -->
+<!-- Background image in homepage -->
 <style>
 body {
   background: url("/static/images/background_op.png") no-repeat;
   background-size: cover;
 }
 </style>
+
 {% endblock %}
 
 {% block title %}{% endblock %}
@@ -16,57 +18,57 @@ body {
 {% block body_block %}
 
 <div id="full-index">
-
+  
   <div class="senses container">
-
+    
     <div class="d-flex justify-content-center">
       <form class="form-group form-inline" id="search" action="{% url 'browse' %}" method="GET">
         <input id="id_q" class="form-group form-control mr-sm-2" name="q" type="search" placeholder="Discover experiences..." aria-label="Search">
         <button class="btn btn btn-warning" id="navbar-search-button" type="submit">Search</button>
       </form>
     </div>
-
+    
   </div>
-
-
+  
+  <!-- 5 Sense Images -->
   <div class="container-fluid">
     <div class="row col-10">
       <div class="col-5">
-
+        
       </div>
-
+      
       <div class="col-1">
         <a href="/artlink/browse?q=sound"><img src="{% static 'images/noise.png' %}" class="rounded-circle" class="img-fluid" alt="noise icon" height="50" width="50"></a>
       </div>
-
+      
       <div class="col-1">
         <a href="/artlink/browse?q=watch"><img src="{% static 'images/eye.png' %}" class="rounded-circle" class="img-fluid" alt="sight icon" height="50" width="50"></a>
       </div>
-
-
+      
+      
       <div class="col-1">
         <a href="/artlink/browse?q=smell"><img src="{% static 'images/smell.png' %}" class="rounded-circle" class="img-fluid" alt="smell icon" height="50" width="50"></a>
       </div>
-
+      
       <div class="col-1">
         <a href="/artlink/browse?q=taste"><img src="{% static 'images/taste.png' %}" class="rounded-circle" class="img-fluid" alt="taste icon" height="50" width="50"></a>
       </div>
-
+      
       <div class="col-1" id="test">
         <a href="/artlink/browse?q=feel"><img src="{% static 'images/touch.png' %}" class="rounded-circle" class="img-fluid" alt="touch icon" height="50" width="50"></a>
       </div>
     </div>
   </div>
-
+  <!-- Bottom Navigator with social media buttons -->
 </div>
-    <div class="bottomnav">
-      <div class="socialmedia">
-        <ul class="social-network social-circle">
-          <li><a href="https://www.instagram.com/artlinkedin/" class="icoInstagram" title="Instagram"><i class="fa fa-instagram" style="color:black"></i></a></li>
-          <li><a href="https://www.facebook.com/ArtlinkEdinburgh" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"style="color:black"></i></a></li>
-          <li><a href="https://twitter.com/ArtlinkEdin" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"style="color:black"></i></a></li>
-        </ul>
-        <div>
-        </div>
-
+<div class="bottomnav">
+  <div class="socialmedia">
+    <ul class="social-network social-circle">
+      <li><a href="https://www.instagram.com/artlinkedin/" class="icoInstagram" title="Instagram"><i class="fa fa-instagram" style="color:black"></i></a></li>
+      <li><a href="https://www.facebook.com/ArtlinkEdinburgh" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"style="color:black"></i></a></li>
+      <li><a href="https://twitter.com/ArtlinkEdin" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"style="color:black"></i></a></li>
+    </ul>
+    <div>
+    </div>
+    
 {% endblock %}
